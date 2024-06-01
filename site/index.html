@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablinks" onclick="openTab(event, 'clicker')">Кликер</button>
+        <button class="tablinks" onclick="openTab(event, 'farm')">Ферма</button>
+        <button class="tablinks" onclick="openTab(event, 'casino')">Казино</button>
+        <button class="tablinks" onclick="openTab(event, 'stats')">Статистика</button>
+    </div>
+
+    <div id="clicker" class="tabcontent">
+        <div class="counter">Баланс: <span id="balance">0</span> | Доход: <span id="income">0</span>/сек</div>
+        <div class="apple-container" id="appleContainer">
+            <img src="1.png" alt="Apple" class="apple" id="apple" draggable="false">
+        </div>
+    </div>
+
+    <div id="farm" class="tabcontent">
+        <div class="farm-grid">
+            <div class="farm-card">
+                <img src="small_farm.jpg" alt="Маленькая ферма">
+                <div class="farm-details">
+                    <h3>Маленькая ферма</h3>
+                    <p>Цена: 500 яблок</p>
+                    <p>Доход: 1 яблоко/сек</p>
+                    <button onclick="buyFarm(500, 1)">Купить</button>
+                </div>
+            </div>
+            <div class="farm-card">
+                    <img src="medium_farm.jpg" alt="Средняя ферма">
+                <div class="farm-details">
+                    <h3>Средняя ферма</h3>
+                    <p>Цена: 1000 яблок</p>
+                    <p>Доход: 2 яблока/сек</p>
+                    <button onclick="buyFarm(1000, 2)">Купить</button>
+                </div>
+            </div>
+            <!-- Добавьте другие карточки ферм по аналогии -->
+        </div>
+        <!-- Добавьте другие карточки ферм по аналогии -->
+    </div>
+
+
+    <div id="casino" class="tabcontent">
+        <!-- Казино контент -->
+    </div>
+
+    <div id="stats" class="tabcontent">
+        <!-- Статистика контент -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
